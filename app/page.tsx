@@ -1,17 +1,11 @@
 "use client";
 
-import { Link } from "@heroui/link";
-import { Snippet } from "@heroui/snippet";
-import { Code } from "@heroui/code";
-import { button as buttonStyles } from "@heroui/theme";
-
-import { siteConfig } from "@/config/site";
 import { title, subtitle } from "@/components/primitives";
-import { GithubIcon } from "@/components/icons";
 import { Saira } from "next/font/google";
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import { Button } from "@heroui/button";
+import Link from "next/link";
 
 const saira = Saira({ subsets: ["latin"], weight: ["400", "700"] });
 
@@ -39,7 +33,7 @@ export default function Home() {
   }, [displayed, showTwist]);
 
   return (
-    <section className="flex flex-col items-center justify-center gap-4">
+    <section className="z-10 flex flex-col items-center justify-center gap-4">
       <div className={`${saira.className} inline-block text-center justify-center`}>
         <motion.span
           className="text-6xl font-bold"
@@ -71,12 +65,19 @@ export default function Home() {
         </motion.span>
         <br />
         <div className={subtitle({ class: "mt-4" })}>
-          Craft Yours Today!
+          PlotTwist lets you create interactive mysteries where you control the suspects, clues, and shocking reveals.
         </div>
       </div>
 
       <div className="flex gap-3">
-        <Button>Hi </Button>
+        <Link href="/app" passHref>
+          <Button
+            size="lg"
+            className="bg-gradient-to-r from-purple-600 to-violet-700 text-white shadow-lg"
+          >
+            Get Started!
+          </Button>
+        </Link>
       </div>
         
     </section>

@@ -1,7 +1,7 @@
 export type SiteConfig = typeof siteConfig;
 
 export const siteConfig = {
-  name: "Next.js + HeroUI",
+  name: "PlotTwist - Every Great Mystery Begins With a Twist",
   description: "Make beautiful websites regardless of your design experience.",
   navItems: [
     {

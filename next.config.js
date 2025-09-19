@@ -1,4 +1,7 @@
+// filepath: c:\GitHub\Veridion Studios\plot-twist\next.config.js
 /** @type {import('next').NextConfig} */
-const nextConfig = {};
+const nextConfig = {
+  // ...your config...
+};
 
-module.exports = nextConfig;
+export default nextConfig;

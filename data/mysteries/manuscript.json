@@ -1,0 +1,55 @@
+{
+  "title": "The Case of the Missing Manuscript",
+  "description": "A priceless manuscript vanishes from the library, and it's up to you to solve the case.",
+  "start": "scene1",
+  "scenes": {
+    "scene1": {
+      "text": "The library looms before you, a fortress of knowledge bathed in the muted glow of the late afternoon sun. Dust motes drift lazily in the shafts of light, swirling around ancient tomes stacked to the ceiling. The scent of old paper and varnished wood fills the air, mixing with something faintly metallic that makes your stomach tighten. The director, a tall man with graying hair and a perpetually nervous expression, hovers near the entrance. His hands twitch as he adjusts the cuff of his jacket, and his eyes dart repeatedly toward the dark corners of the room. You can sense the tension in the air, as if the walls themselves are holding their breath, waiting for you to act. Every instinct tells you that the missing manuscript is close, hidden somewhere within these walls, and that the answers will not be found by a cursory glance. Every detail—the flicker of a candle, the misplaced ledger, the creak of a floorboard—could be the key to uncovering the truth.",
+      "choices": [
+        { "label": "Inspect the desk", "next": "scene2" },
+        { "label": "Interview the director", "next": "scene3" },
+        { "label": "Look around the room quietly", "next": "scene1b" }
+      ]
+    },
+    "scene1b": {
+      "text": "You move silently across the polished wooden floor, each step measured and deliberate, careful not to disturb the heavy silence. Your eyes sweep over the shelves, noting the dust patterns and slight indentations on the spines of rare editions. One first edition, its leather cover cracked with age, seems to have been recently touched; the dust on its surface is disturbed in a way that suggests it was moved hurriedly. The faint scent of candle wax lingers near the top shelf, and a slight draft brushes against the back of your neck, hinting at a hidden crevice or an unnoticed passage. Every shadow seems to stretch unnaturally, and the air is thick with the weight of secrets long kept. It becomes clear that simply questioning the director may not be enough—you must investigate every corner, every anomaly, if you hope to find the manuscript.",
+      "choices": [
+        { "label": "Climb to inspect the book", "next": "scene2b" },
+        { "label": "Return to the director", "next": "scene3" }
+      ]
+    },
+    "scene2": {
+      "text": "The desk sits near the center of the library, cluttered with ledgers, quills, and scattered notes. As you examine it closely, you notice a torn envelope partially hidden beneath a pile of official documents. The paper is thick and creamy, with an elegant watermark that almost catches the light. The handwriting on the envelope is deliberate yet unfamiliar, curling and swooping in ways that speak of someone accustomed to secrecy and discretion. The wax seal, though broken, bears an intricate crest—something you feel you’ve seen before in historical references, though you cannot immediately place it. Picking up the envelope, you feel the subtle weight of its contents and the thrill of discovery coursing through you. It is small, tangible evidence that could unravel the entire mystery, should you choose to pursue it.",
+      "choices": [
+        { "label": "Take the envelope (clue)", "next": "scene4", "clue": "Torn Envelope" },
+        { "label": "Leave it for now", "next": "scene3" }
+      ]
+    },
+    "scene2b": {
+      "text": "Reaching carefully for the first edition, you notice a small, folded note tucked between the pages. The paper is delicate, slightly yellowed with age, and the ink is faint but legible. The note reads, 'Meet me at midnight in the west wing.' A shiver runs down your spine as you consider the implications: someone had orchestrated a secret meeting right under the library’s roof, using the pretense of academic study as a cover. The shadows in the corners of the room seem to deepen as if they are listening, and the quiet creak of the floorboards behind you reminds you that you are not alone. Every instinct tells you that this note is a critical clue, potentially the key to finding the missing manuscript and uncovering the identity of the thief.",
+      "choices": [
+        { "label": "Take the note (clue)", "next": "scene4b", "clue": "Midnight Note" },
+        { "label": "Return to the director", "next": "scene3" }
+      ]
+    },
+    "scene3": {
+      "text": "The director wrings his hands nervously as he speaks, the fine lines of worry etched deep into his face. 'I assure you, I know nothing about the missing manuscript,' he insists, but his voice wavers slightly, betraying uncertainty. You notice that he avoids looking directly at you, glancing instead at the floor and occasionally over his shoulder at the locked cabinet near the back wall. The room is heavy with unspoken words, the kind that linger in the air like the scent of old paper and varnish. It becomes increasingly clear that extracting information from him will require patience, keen observation, and perhaps a subtle use of pressure. You must weigh your choices carefully, for the wrong move could close off vital leads and allow the thief to escape undetected.",
+      "choices": [
+        { "label": "Press harder for answers", "next": "scene5" },
+        { "label": "Examine the shelves while he talks", "next": "scene1b" }
+      ]
+    },
+    "scene4": {
+      "text": "Studying the torn envelope in detail, you notice the intricate design of the wax seal, faintly embossed with a mysterious crest that suggests membership in a secretive society or guild. The edges of the paper are frayed, and the faint scent of ink lingers, mingling with the smell of the old desk and worn leather. You sense that whoever sent this message is clever, careful, and perhaps desperate. Every detail of the envelope tells a story: the choice of paper, the angle of the writing, even the way it was hidden under the pile of documents. This small clue could lead you directly to the mastermind behind the theft, if you follow it wisely.",
+      "choices": [
+        { "label": "Follow the lead", "next": "scene5" }
+      ]
+    },
+    "scene4b": {
+      "text": "The note’s words seem almost to whisper in your mind, hinting at clandestine movements and secret rendezvous. The west wing of the library is shrouded in shadows, and the faint flicker of candlelight suggests that someone has been there recently. Every sound seems amplified—the rustle of paper, the distant drip of water, the faint groan of the old building settling. The atmosphere is thick with tension, and you realize that the night holds many secrets waiting to be discovered. Acting on this note could bring you face to face with the thief, or lead you into a trap carefully laid in advance.",
+      "choices": [
+        { "label": "Investigate the note further", "next": "scene5" }
+      ]
+    }
+  }
+}

@@ -6,6 +6,7 @@ import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import { Button } from "@heroui/button";
 import Link from "next/link";
+import { Play } from "lucide-react";
 
 const saira = Saira({ subsets: ["latin"], weight: ["400", "700"] });
 
@@ -75,7 +76,8 @@ export default function Home() {
             size="lg"
             className="bg-gradient-to-r from-purple-600 to-violet-700 text-white shadow-lg"
           >
-            Get Started!
+            <Play />
+            Play
           </Button>
         </Link>
       </div>

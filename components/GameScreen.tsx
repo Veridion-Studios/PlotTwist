@@ -96,7 +96,7 @@ export default function InteractiveBook({ mystery }: { mystery: Mystery }) {
 
   if (!started) {
     return (
-      <div className="h-screen relative flex flex-col justify-center items-center px-6 text-center overflow-hidden">
+      <div className="w-[1000px] h-screen relative flex flex-col justify-center items-center px-6 text-center overflow-hidden">
         <ParticleBackground />
         <motion.h1
           className="text-6xl md:text-7xl font-extrabold text-white z-10"
@@ -136,7 +136,7 @@ export default function InteractiveBook({ mystery }: { mystery: Mystery }) {
       <ParticleBackground />
 
       {/* Navbar */}
-      <div className="w-full flex justify-between items-center p-4 bg-black/40 backdrop-blur-md text-white rounded-b-2xl shadow-lg z-10">
+      <div className="w-[800px] max-w-full flex justify-between items-center p-4 bg-black/40 backdrop-blur-md text-white rounded-b-2xl shadow-lg z-10 mx-auto">
         <div className="text-lg font-semibold">{mystery.title}</div>
         <div className="flex items-center gap-6">
           <div>Block {blockIndex + 1}/{blocks.length}</div>

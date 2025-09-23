@@ -1,55 +1,167 @@
 {
-  "title": "The Case of the Missing Manuscript",
-  "description": "A priceless manuscript vanishes from the library, and it's up to you to solve the case.",
-  "start": "scene1",
+  "title": "The Missing Manuscript",
+  "description": "An ancient text has vanished from the university archives. Step into the role of an investigator, follow the trail of clues, and uncover the truth before the manuscript is lost forever.",
+  "start": "intro",
   "scenes": {
-    "scene1": {
-      "text": "The library looms before you, a fortress of knowledge bathed in the muted glow of the late afternoon sun. Dust motes drift lazily in the shafts of light, swirling around ancient tomes stacked to the ceiling. The scent of old paper and varnished wood fills the air, mixing with something faintly metallic that makes your stomach tighten. The director, a tall man with graying hair and a perpetually nervous expression, hovers near the entrance. His hands twitch as he adjusts the cuff of his jacket, and his eyes dart repeatedly toward the dark corners of the room. You can sense the tension in the air, as if the walls themselves are holding their breath, waiting for you to act. Every instinct tells you that the missing manuscript is close, hidden somewhere within these walls, and that the answers will not be found by a cursory glance. Every detail—the flicker of a candle, the misplaced ledger, the creak of a floorboard—could be the key to uncovering the truth.",
+    "intro": {
+      "text": "You stand at the gates of the Ashwell University Library, where rumors swirl of a priceless manuscript gone missing. The evening air is cool, and the lamplight glows warmly against the stone walls. Somewhere inside, the truth awaits.",
       "choices": [
-        { "label": "Inspect the desk", "next": "scene2" },
-        { "label": "Interview the director", "next": "scene3" },
-        { "label": "Look around the room quietly", "next": "scene1b" }
+        { "label": "Step inside the library", "next": "libraryEntrance", "xp": 10 },
+        { "label": "Question the guard outside", "next": "talkGuard", "xp": 5 }
       ]
     },
-    "scene1b": {
-      "text": "You move silently across the polished wooden floor, each step measured and deliberate, careful not to disturb the heavy silence. Your eyes sweep over the shelves, noting the dust patterns and slight indentations on the spines of rare editions. One first edition, its leather cover cracked with age, seems to have been recently touched; the dust on its surface is disturbed in a way that suggests it was moved hurriedly. The faint scent of candle wax lingers near the top shelf, and a slight draft brushes against the back of your neck, hinting at a hidden crevice or an unnoticed passage. Every shadow seems to stretch unnaturally, and the air is thick with the weight of secrets long kept. It becomes clear that simply questioning the director may not be enough—you must investigate every corner, every anomaly, if you hope to find the manuscript.",
+    "libraryEntrance": {
+      "text": "The library’s grand hall is quiet, its vaulted ceiling stretching overhead. Shelves line the walls, and the scent of old parchment fills the air. Something is amiss—the usual order feels disturbed.",
       "choices": [
-        { "label": "Climb to inspect the book", "next": "scene2b" },
-        { "label": "Return to the director", "next": "scene3" }
+        { "label": "Examine the librarian’s desk", "next": "librarianDesk", "xp": 10 },
+        { "label": "Head toward the restricted archives", "next": "restrictedDoor", "xp": 15 }
       ]
     },
-    "scene2": {
-      "text": "The desk sits near the center of the library, cluttered with ledgers, quills, and scattered notes. As you examine it closely, you notice a torn envelope partially hidden beneath a pile of official documents. The paper is thick and creamy, with an elegant watermark that almost catches the light. The handwriting on the envelope is deliberate yet unfamiliar, curling and swooping in ways that speak of someone accustomed to secrecy and discretion. The wax seal, though broken, bears an intricate crest—something you feel you’ve seen before in historical references, though you cannot immediately place it. Picking up the envelope, you feel the subtle weight of its contents and the thrill of discovery coursing through you. It is small, tangible evidence that could unravel the entire mystery, should you choose to pursue it.",
+    "talkGuard": {
+      "text": "The guard hesitates when you ask about the missing manuscript. He recalls seeing a figure leaving late last night, carrying a satchel, but insists it wasn’t his job to interfere.",
       "choices": [
-        { "label": "Take the envelope (clue)", "next": "scene4", "clue": "Torn Envelope" },
-        { "label": "Leave it for now", "next": "scene3" }
+        { "label": "Press him for details", "next": "guardDetails", "xp": 10 },
+        { "label": "Leave him and head inside", "next": "libraryEntrance", "xp": 5 }
       ]
     },
-    "scene2b": {
-      "text": "Reaching carefully for the first edition, you notice a small, folded note tucked between the pages. The paper is delicate, slightly yellowed with age, and the ink is faint but legible. The note reads, 'Meet me at midnight in the west wing.' A shiver runs down your spine as you consider the implications: someone had orchestrated a secret meeting right under the library’s roof, using the pretense of academic study as a cover. The shadows in the corners of the room seem to deepen as if they are listening, and the quiet creak of the floorboards behind you reminds you that you are not alone. Every instinct tells you that this note is a critical clue, potentially the key to finding the missing manuscript and uncovering the identity of the thief.",
+    "guardDetails": {
+      "text": "Reluctantly, he admits the figure was tall, wearing a long coat, and headed toward the east wing. He quickly changes the subject, clearly uncomfortable.",
       "choices": [
-        { "label": "Take the note (clue)", "next": "scene4b", "clue": "Midnight Note" },
-        { "label": "Return to the director", "next": "scene3" }
+        { "label": "Go inside to the library", "next": "libraryEntrance", "xp": 5 },
+        { "label": "Investigate the east wing outside", "next": "eastWingExterior", "xp": 15 }
       ]
     },
-    "scene3": {
-      "text": "The director wrings his hands nervously as he speaks, the fine lines of worry etched deep into his face. 'I assure you, I know nothing about the missing manuscript,' he insists, but his voice wavers slightly, betraying uncertainty. You notice that he avoids looking directly at you, glancing instead at the floor and occasionally over his shoulder at the locked cabinet near the back wall. The room is heavy with unspoken words, the kind that linger in the air like the scent of old paper and varnish. It becomes increasingly clear that extracting information from him will require patience, keen observation, and perhaps a subtle use of pressure. You must weigh your choices carefully, for the wrong move could close off vital leads and allow the thief to escape undetected.",
+    "librarianDesk": {
+      "text": "The desk is cluttered with catalog cards and a half-empty teacup. You notice a torn scrap of parchment tucked under a ledger.",
       "choices": [
-        { "label": "Press harder for answers", "next": "scene5" },
-        { "label": "Examine the shelves while he talks", "next": "scene1b" }
+        { "label": "Read the parchment scrap", "next": "parchmentScrap", "clue": "Clue: Fragment of an old inventory.", "xp": 20 },
+        { "label": "Ignore it and head deeper", "next": "restrictedDoor", "xp": 5 }
       ]
     },
-    "scene4": {
-      "text": "Studying the torn envelope in detail, you notice the intricate design of the wax seal, faintly embossed with a mysterious crest that suggests membership in a secretive society or guild. The edges of the paper are frayed, and the faint scent of ink lingers, mingling with the smell of the old desk and worn leather. You sense that whoever sent this message is clever, careful, and perhaps desperate. Every detail of the envelope tells a story: the choice of paper, the angle of the writing, even the way it was hidden under the pile of documents. This small clue could lead you directly to the mastermind behind the theft, if you follow it wisely.",
+    "parchmentScrap": {
+      "text": "The scrap lists manuscripts under lock and key. One title is circled: 'Codex Noctis.' In hurried handwriting beneath it: 'Check ownership records—possible dispute.'",
       "choices": [
-        { "label": "Follow the lead", "next": "scene5" }
+        { "label": "Pocket the clue and continue", "next": "restrictedDoor", "xp": 10 }
       ]
     },
-    "scene4b": {
-      "text": "The note’s words seem almost to whisper in your mind, hinting at clandestine movements and secret rendezvous. The west wing of the library is shrouded in shadows, and the faint flicker of candlelight suggests that someone has been there recently. Every sound seems amplified—the rustle of paper, the distant drip of water, the faint groan of the old building settling. The atmosphere is thick with tension, and you realize that the night holds many secrets waiting to be discovered. Acting on this note could bring you face to face with the thief, or lead you into a trap carefully laid in advance.",
+    "restrictedDoor": {
+      "text": "You arrive at a heavy iron door marked 'Restricted Archives.' The lock has been tampered with—someone forced their way inside.",
       "choices": [
-        { "label": "Investigate the note further", "next": "scene5" }
+        { "label": "Enter the archives", "next": "archives", "xp": 15 },
+        { "label": "Check for footprints", "next": "footprints", "xp": 10 }
       ]
+    },
+    "eastWingExterior": {
+      "text": "The east wing of the library looms quietly. A broken window on the second floor suggests someone climbed out in a hurry.",
+      "choices": [
+        { "label": "Climb up to the window", "next": "eastWingWindow", "xp": 20 },
+        { "label": "Return to the main entrance", "next": "libraryEntrance", "xp": 5 }
+      ]
+    },
+    "eastWingWindow": {
+      "text": "The climb is challenging, but you pull yourself inside. The study smells faintly of ink and dust. On the floor lies a satchel with initials burned into the leather.",
+      "choices": [
+        { "label": "Inspect the satchel", "next": "satchel", "xp": 15 },
+        { "label": "Search the rest of the study", "next": "studySearch", "xp": 10 }
+      ]
+    },
+    "archives": {
+      "text": "The restricted archives are a maze of locked cabinets and dusty tomes. A row of shelves has been overturned, papers scattered across the floor.",
+      "choices": [
+        { "label": "Search the shelves", "next": "shelvesSearch", "xp": 15 },
+        { "label": "Look for a secret passage", "next": "secretPassage", "xp": 20 }
+      ]
+    },
+    "footprints": {
+      "text": "The footprints lead away from the archives toward the east stairwell. Whoever it was, they moved quickly.",
+      "choices": [
+        { "label": "Follow the footprints", "next": "stairwell", "xp": 15 },
+        { "label": "Ignore them and return to the archives", "next": "archives", "xp": 5 }
+      ]
+    },
+    "satchel": {
+      "text": "Inside the satchel, you find broken quills, a folded letter, and a brass key. The letter reads: 'Meet me at the clock tower—midnight.'",
+      "choices": [
+        { "label": "Take the key and letter", "next": "studySearch", "clue": "Clue: Letter about midnight meeting.", "xp": 25 }
+      ]
+    },
+    "studySearch": {
+      "text": "The study’s shelves hold nothing unusual, but a draft slips through a crack in the wall. A hidden door stands slightly ajar.",
+      "choices": [
+        { "label": "Enter the hidden door", "next": "hiddenChamber", "xp": 20 },
+        { "label": "Return to the archives", "next": "archives", "xp": 10 }
+      ]
+    },
+    "shelvesSearch": {
+      "text": "Among the toppled books you find another parchment, torn in half. It matches the earlier scrap. Together, they hint at a dispute over the Codex Noctis between collectors.",
+      "choices": [
+        { "label": "Keep the parchment and continue", "next": "secretPassage", "clue": "Clue: Completed parchment about ownership dispute.", "xp": 20 }
+      ]
+    },
+    "secretPassage": {
+      "text": "You press against the wall and feel it shift. With a low groan, a hidden passage opens, leading downward into an older part of the building.",
+      "choices": [
+        { "label": "Descend into the passage", "next": "undergroundHall", "xp": 20 }
+      ]
+    },
+    "stairwell": {
+      "text": "The stairwell spirals downward. Halfway, you hear muffled voices echoing below.",
+      "choices": [
+        { "label": "Sneak closer to listen", "next": "overhear", "xp": 15 },
+        { "label": "Step forward to confront them", "next": "confrontation", "xp": 20 }
+      ]
+    },
+    "overhear": {
+      "text": "You hear two academics arguing: 'The Codex must be presented tonight.' 'And if the university finds out?' 'Then our chance at recognition is gone.'",
+      "choices": [
+        { "label": "Keep listening", "next": "confrontation", "xp": 10 },
+        { "label": "Retreat quietly", "next": "archives", "xp": 5 }
+      ]
+    },
+    "hiddenChamber": {
+      "text": "The chamber is lined with stone, a single pedestal in the center. But it is empty—the manuscript has already been removed.",
+      "choices": [
+        { "label": "Search for more clues", "next": "clueDiscovery", "xp": 20 }
+      ]
+    },
+    "clueDiscovery": {
+      "text": "Carved into the floor is a symbol of the university’s founding society. Footprints lead toward another exit.",
+      "choices": [
+        { "label": "Follow the footprints", "next": "undergroundHall", "xp": 15 }
+      ]
+    },
+    "undergroundHall": {
+      "text": "You emerge into a forgotten hall beneath the university. At the far end, a group of rival scholars huddle around a table. The missing manuscript lies before them.",
+      "choices": [
+        { "label": "Sneak closer", "next": "finalChoice", "xp": 20 },
+        { "label": "Rush in and confront them", "next": "badEnding", "xp": 10 }
+      ]
+    },
+    "confrontation": {
+      "text": "You step into the open. The rivals look up in surprise. One clutches the manuscript protectively, while another quickly covers a stack of notes.",
+      "choices": [
+        { "label": "Negotiate", "next": "finalChoice", "xp": 15 },
+        { "label": "Snatch the manuscript", "next": "badEnding", "xp": 10 }
+      ]
+    },
+    "finalChoice": {
+      "text": "The lead scholar glares: 'This manuscript will make our careers. Why should you decide its fate?' The tension is palpable as you prepare to act.",
+      "choices": [
+        { "label": "Seize the manuscript for safekeeping", "next": "goodEnding", "xp": 30 },
+        { "label": "Propose joint custody with the university", "next": "alternateEnding", "xp": 30 }
+      ]
+    },
+    "goodEnding": {
+      "text": "With a decisive move, you secure the Codex and ensure it returns to the university’s care. The archives may rest easy—for now.",
+      "choices": []
+    },
+    "alternateEnding": {
+      "text": "You persuade the rivals to agree on joint preservation. The Codex will be studied openly, ensuring knowledge is shared rather than hoarded.",
+      "choices": []
+    },
+    "badEnding": {
+      "text": "Your attempt to snatch the manuscript fails. In the scuffle, the rivals escape with it into the night. The mystery remains unsolved—for now.",
+      "choices": []
     }
   }
 }

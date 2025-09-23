@@ -66,12 +66,12 @@ export default function Home() {
         </motion.span>
         <br />
         <div className={subtitle({ class: "mt-4" })}>
-          PlotTwist lets you create interactive mysteries where you control the suspects, clues, and shocking reveals.
+          PlotTwist lets you craft interactive mysteries where you control the suspects, clues, and shocking reveals.
         </div>
       </div>
 
       <div className="flex gap-3">
-        <Link href="/app" passHref>
+        <Link href="/gallery" passHref>
           <Button
             size="lg"
             className="bg-gradient-to-r from-purple-600 to-violet-700 text-white shadow-lg"
